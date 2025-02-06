@@ -1,0 +1,241 @@
+/* Universal Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 400px;
+    background-color: #fff;
+    z-index: 2;
+    overflow: visible;
+}
+
+
+.logo-container {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    padding-top: 64px;
+    width: 400px;
+    height: auto;
+}
+
+.pattern__left, .pattern__right {
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    /* max-height: 100%; */
+    background-repeat: no-repeat;
+}
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.pattern__left {
+    top: 0;
+    left: 0;
+}
+
+.pattern__right {
+    top: 0;
+    right: 0;
+}
+
+.report-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.date-container {
+    display: inline;
+    gap: 8px;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #555;
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+
+/* Info Containers */
+
+.info__container {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* margin: 64px, 64px; */
+    margin-left: 64px;
+    margin-right: 64px;
+    margin-top: 32px;
+}
+
+.pacing-box, .partner-box {
+    margin-top: 64px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.emoji-rating {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.emoji {
+    z-index: 2;
+    font-size: 90px;
+    opacity: 0.3; /* Default faded */
+}
+
+.emoji.selected {
+    z-index: 2;
+    opacity: 1;
+    
+}
+.campaign__text, .partner__text{
+    z-index: 2;
+    font-size: 32px;
+}
+
+
+.partner-logo {
+    z-index: 2;
+    width: auto;
+    /* max-width: 120px; */
+    height: auto;
+    margin-top: 10px;
+    /* max-width: 30%; */
+}
+
+/* Metrics Section */
+.metrics-container {
+    display: flex;
+    gap: 1rem;
+    margin-left: 72px;
+    margin-right: 72px;
+    margin-top: 32px;
+  }
+  
+  .metric-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+  }
+ 
+  
+  .metric-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+  }
+  
+  .metric-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6c757d;
+  }
+
+  
+  .card-impressions { background-color: #eaf4ff; }
+  .card-conversions { background-color: #f4f2ff; }
+  .card-clicks { background-color: #f4ffe5; }
+  .card-ctr { background-color: #fff8e5; }
+  .card-reach { background-color: #ffe5e8; }
+  .card-revenue { background-color: #fff4e5; }
+  
+
+/* Multiple Screen Sizes Formats */
+
+@media (max-width: 1024px) {
+    .pattern__left, .pattern__right {
+        width: 25%;
+        opacity: .6;
+
+        /* display: none; */
+    }
+    .info__container{
+        flex-direction: column;
+        padding: 0px;
+       }
+    .metrics-container{
+        flex-wrap: wrap;
+    }
+   
+}
+
+@media (max-width: 768px) {
+    .pattern__left, .pattern__right {
+        width: 20%;
+        opacity: .3;
+    }
+   
+    
+    
+}
+@media (max-width: 600px) {
+    .pattern__left, .pattern__right {
+        width: 15%;
+        opacity: 0.3;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    .pattern-right, .pattern-left {
+        display: none;
+    }
+   
+}
