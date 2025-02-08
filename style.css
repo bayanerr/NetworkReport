@@ -8,7 +8,6 @@ body {
 }
 
 /* Header */
-
 .header {
     display: flex;
     align-items: center;
@@ -20,8 +19,7 @@ body {
     overflow: visible;
 }
 
-
-.logo-container {
+.logo__container {
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -39,7 +37,6 @@ body {
     position: absolute;
     top: 50%;
     width: 30%;
-    /* max-height: 100%; */
     background-repeat: no-repeat;
 }
 
@@ -62,14 +59,14 @@ body {
     right: 0;
 }
 
-.report-title {
+.report__title {
     font-size: 48px;
     font-weight: bold;
     margin-top: 20px;
     z-index: 2;
 }
 
-.date-container {
+.date__container {
     display: inline;
     gap: 8px;
     align-items: center;
@@ -89,7 +86,6 @@ body {
 
 
 /* Info Containers */
-
 .info__container {
     display: flex;
     gap: 20px;
@@ -101,8 +97,8 @@ body {
     margin-top: 32px;
 }
 
-.pacing-box,
-.partner-box {
+.pacing__box,
+.partner__box {
     margin-top: 64px;
     background: #fff;
     border-radius: 12px;
@@ -113,10 +109,9 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-
 }
 
-.emoji-rating {
+.emoji__rating {
     display: flex;
     gap: 10px;
     margin-top: 10px;
@@ -140,8 +135,7 @@ body {
     font-size: 32px;
 }
 
-
-.partner-logo {
+.partner__logo {
     z-index: 2;
     width: auto;
     height: auto;
@@ -149,7 +143,7 @@ body {
 }
 
 /* Metrics Section */
-.metrics-container {
+.metrics__container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,7 +153,7 @@ body {
     margin-top: 32px;
 }
 
-.metric-card {
+.metric__card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,48 +167,47 @@ body {
     text-align: center;
 }
 
-
-.metric-icon {
+.metric__icon {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
-.metric-value {
+.metric__value {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.2rem;
 }
 
-.metric-label {
+.metric__label {
     font-size: 1.2rem;
     font-weight: bold;
     color: #6c757d;
 }
 
-
-.card-impressions {
+.card__impressions {
     background-color: #eaf4ff;
 }
 
-.card-conversions {
+.card__conversions {
     background-color: #f4f2ff;
 }
 
-.card-clicks {
+.card__clicks {
     background-color: #f4ffe5;
 }
 
-.card-ctr {
+.card__ctr {
     background-color: #fff8e5;
 }
 
-.card-reach {
+.card__reach {
     background-color: #ffe5e8;
 }
 
 .card-revenue {
     background-color: #fff4e5;
 }
+
 
 /* Bar Charts */
 .barcharts__container {
@@ -242,7 +235,7 @@ h3 {
     text-align: center;
 }
 
-.bar-chart {
+.bar__chart {
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 5px 10px;
@@ -256,16 +249,25 @@ h3 {
     transition: width 0.3s ease;
 }
 
-.bar-label,
-.bar-value {
+.bar__label,
+.bar__value {
     font-size: 20px;
     color: #333;
     text-align: right;
 }
 
 
-/* Pie Chart Details */
-
+/* Pie Chart Section */
+.chart__container {
+    margin: 80px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
+}
 .info {
     margin: 80px;
     display: flex;
@@ -274,7 +276,7 @@ h3 {
     gap: 20px;
 }
 
-.info-item {
+.info__item {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -289,7 +291,6 @@ h3 {
     border-radius: 10px;
 }
 
-
 .details .percentage {
     font-size: 24px;
     font-weight: bold;
@@ -302,40 +303,25 @@ h3 {
     margin: 0;
 }
 
-/* Pie Chart Section */
-
-.chart-container {
-    margin: 80px;
-    display: flex;
-    flex-direction: row;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    gap: 20px;
-}
-
-
-
 
 
 /* Multiple Screen Sizes Formats */
 @media (max-width: 1368px){
-    /* .chart-container {
+    /* Pie Chart Adjustments */
+    .info {
+        flex-wrap: wrap;
         flex-direction: column;
-    } */
+    } 
     .barcharts__container {
         /* flex-wrap: wrap; */
         flex-direction: column;
         align-items: center;
         margin: 16px;
-
     }
+    /* Bar Chart Adjustments */
     .bar{
         height: 30px;
-
-    }
-    
+    }    
 }
 @media (max-width: 1024px) {
 
@@ -352,14 +338,14 @@ h3 {
         padding: 0px;
     }
 
-    .metrics-container {
+    .metrics__container {
         flex-wrap: wrap;
     }
 
     .barcharts__container {
         flex-wrap: wrap;
     }
-    .chart-container {
+    .chart__container {
         flex-direction: column;
     }
     
@@ -393,18 +379,18 @@ h3 {
 
 @media (max-width: 480px) {
     /* Header Adjustments */
-    .pattern-right,
-    .pattern-left {
+    .pattern__right,
+    .pattern__left {
         display: none;
     }
     .logo{
         width: 250px;
         padding-top: 0px;
     }
-    .report-title{
+    .report__title{
         font-size: 24px;
     }
-    .date-container{
+    .date__container{
         font-size: 20px;
     }
     /* Campain Pacing/Partner Adjustments */
@@ -415,35 +401,35 @@ h3 {
     .emoji, .emoji.selected{
         font-size: 30px;
     }
-    .partner-logo{
+    .partner__logo{
     max-width: 80%;
     }
     .info__container,
-    .pacing-box,
-    .partner-box{
+    .pacing__box,
+    .partner__box{
         margin-top: 0px;
     }
 
     /* Metrics Adjustments */
-    .metrics-container{
+    .metrics__container{
         margin-left: 24px;
         margin-right: 24px;
     }
-    .metric-icon {
+    .metric__icon {
         font-size: 1.5rem;
         margin-bottom: 0.3rem;
     }
-    .metric-value {
+    .metric__value {
         font-size: 1rem;
         font-weight: bold;
         margin-bottom: 0.1rem;
     }
-    .metric-label {
+    .metric__label {
         font-size: 1rem;
         font-weight: bold;
         color: #6c757d;
     }
-    .metric-card{
+    .metric__card{
         height: 120px;
         width: 32%;
     }
@@ -455,8 +441,8 @@ h3 {
     h3{
         font-size: 16px
     }
-    .bar-label,
-    .bar-value {
+    .bar__label,
+    .bar__value {
         font-size: 12px;
     }
     .bar{
@@ -464,7 +450,7 @@ h3 {
     }
 
     /* Pie Charts adjustments */
-    .chart-container {
+    .chart__container {
         flex-direction: column;
         margin: 16px;
 

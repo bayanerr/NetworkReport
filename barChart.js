@@ -32,16 +32,16 @@ $(document).ready(function () {
       data.forEach((item) => {
         const barWidth = (item.value / maxValue) * 100; // Calculate bar width as percentage
         $(`#${containerId}`).append(`
-          <div class="bar-label">${item.label}</div>
+          <div class="bar__label">${item.label}</div>
           <div class="bar" style="width: ${barWidth}%"></div>
-          <div class="bar-value">${item.value}</div>
+          <div class="bar__value">${item.value}</div>
         `);
       });
     }
   
     // Render both charts
-    renderChart("chart-impressions", impressionsData, Math.max(...impressionsData.map(d => d.value)));
-    renderChart("chart-clicks", clicksData, Math.max(...clicksData.map(d => d.value)));
+    renderChart("chart__impressions", impressionsData, Math.max(...impressionsData.map(d => d.value)));
+    renderChart("chart__clicks", clicksData, Math.max(...clicksData.map(d => d.value)));
   });
 
 

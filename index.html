@@ -18,18 +18,25 @@
 
     <!-- Header Elements -->
     <header class="header">
+
         <div class="header__container">
+            <!-- Right Image Pattern -->
             <img src="assets/patternRight.png" alt="" class="pattern__right">
-            <div class="logo-container">
+            
+            <!-- Middle of Header: Logo, Text, & Date -->
+            <div class="logo__container">
                 <img src="assets/logo.jpeg" alt="" class="logo">
-                <h1 class="report-title">Muslim Ad Network Report</h1>
-                <div class="date-container">
+                <h1 class="report__title">Muslim Ad Network Report</h1>
+                <div class="date__container">
                     <i class="fa-regular fa-calendar"></i>
-                    <span class="date-text"> 12 Dec - 12 Jan</span>
+                    <span class="date__text"> 12 Dec - 12 Jan</span>
                 </div>
             </div>
+            <!-- Left Image Pattern -->
             <img src="assets/patternLeft.png" alt="" class="pattern__left">
+
         </div>
+
     </header>
 
 
@@ -37,7 +44,7 @@
         <!-- Campain Pacing and Parnter Section -->
         <div class="info__container">
 
-            <div class="pacing-box">
+            <div class="pacing__box">
                 <h4 class="campaign__text">CAMPAIGN PACING</h4>
                 <div class="emoji-rating">
                     <span class="emoji">😞</span>
@@ -48,50 +55,50 @@
                 </div>
             </div>
 
-            <div class="partner-box">
+            <div class="partner__box">
                 <h4 class="partner__text">PARTNER</h4>
-                <img class="partner-logo" src="assets/birrLogo.png" alt="Birr Necessities Logo">
+                <img class="partner__logo" src="assets/birrLogo.png" alt="Birr Necessities Logo">
             </div>
 
         </div>
 
         <!-- Metrics Containers -->
-        <div class="metrics-container">
+        <div class="metrics__container">
             <!-- Impressions Card -->
-            <div class="metric-card card-impressions">
-                <div class="metric-icon">👁️</div>
-                <div class="metric-value">66,553</div>
-                <div class="metric-label">Impressions</div>
+            <div class="metric__card card__impressions">
+                <div class="metric__icon">👁️</div>
+                <div class="metric__value">66,553</div>
+                <div class="metric__label">Impressions</div>
             </div>
             <!-- Conversions Card -->
-            <div class="metric-card card-conversions">
-                <div class="metric-icon">🔄</div>
-                <div class="metric-value">13</div>
-                <div class="metric-label">Conversions</div>
+            <div class="metric__card card__conversions">
+                <div class="metric__icon">🔄</div>
+                <div class="metric__value">13</div>
+                <div class="metric__label">Conversions</div>
             </div>
             <!-- Clicks Card -->
-            <div class="metric-card card-clicks">
-                <div class="metric-icon">🖱️</div>
-                <div class="metric-value">23</div>
-                <div class="metric-label">Clicks</div>
+            <div class="metric__card card__clicks">
+                <div class="metric__icon">🖱️</div>
+                <div class="metric__value">23</div>
+                <div class="metric__label">Clicks</div>
             </div>
             <!-- CTR Card -->
-            <div class="metric-card card-ctr">
-                <div class="metric-icon">📈</div>
-                <div class="metric-value">0.03%</div>
-                <div class="metric-label">CTR</div>
+            <div class="metric__card card__ctr">
+                <div class="metric__icon">📈</div>
+                <div class="metric__value">0.03%</div>
+                <div class="metric__label">CTR</div>
             </div>
             <!-- Muslims Reached Card -->
-            <div class="metric-card card-reach">
-                <div class="metric-icon">👥</div>
-                <div class="metric-value">16,638</div>
-                <div class="metric-label">Muslims Reached</div>
+            <div class="metric__card card__reach">
+                <div class="metric__icon">👥</div>
+                <div class="metric__value">16,638</div>
+                <div class="metric__label">Muslims Reached</div>
             </div>
             <!-- Revenue Card -->
-            <div class="metric-card card-revenue">
-                <div class="metric-icon">💰</div>
-                <div class="metric-value">$457.41</div>
-                <div class="metric-label">Revenue</div>
+            <div class="metric__card card__revenue">
+                <div class="metric__icon">💰</div>
+                <div class="metric__value">$457.41</div>
+                <div class="metric__label">Revenue</div>
             </div>
 
         </div>
@@ -101,12 +108,12 @@
             <!-- Chart 1 -->
             <div class="chart">
                 <h3>Top Websites & Apps Per Impressions</h3>
-                <div class="bar-chart" id="chart-impressions"></div>
+                <div class="bar__chart" id="chart__impressions"></div>
             </div>
             <!-- Chart 2 -->
             <div class="chart">
                 <h3>Top Websites & Apps Per Clicks</h3>
-                <div class="bar-chart" id="chart-clicks"></div>
+                <div class="bar__chart" id="chart__clicks"></div>
             </div>
 
             <script src="barChart.js"></script>
@@ -115,9 +122,9 @@
 
 
         <!-- Pie Chart -->
-        <h3 class="piechart__text">Impressions & Clicks per Device Type</h3>
 
-        <div class="chart-container">
+        <div class="chart__container">
+            <h3 class="piechart__text">Impressions & Clicks per Device Type</h3>
             <!-- Chart -->
             <div class="piechart">
                 <canvas id="deviceChart"></canvas>
@@ -127,33 +134,33 @@
             <!-- Pie Chart Labels -->
             <div class="info">
                 <!-- Smartphone Label-->
-                <div class="info-item">
+                <div class="info__item">
                     <div class="icon__bar__chart" style="background-color: #cce5ff;">
                         <i class="fa-solid fa-mobile"></i>
                     </div>
                     <div class="details">
                         <p class="percentage">88.1%</p>
-                        <p class="device-type">Smart Phone</p>
+                        <p class="device__type">Smart Phone</p>
                     </div>
                 </div>
                 <!-- Desktop Label-->
-                <div class="info-item">
+                <div class="info__item">
                     <div class="icon__bar__chart" style="background-color: #e6ccff;">
                         <i class="fa-solid fa-desktop"></i>
                     </div>
                     <div class="details">
                         <p class="percentage">10.5%</p>
-                        <p class="device-type">Desktop</p>
+                        <p class="device__type">Desktop</p>
                     </div>
                 </div>
                 <!-- Tablet Label-->
-                <div class="info-item">
+                <div class="info__item">
                     <div class="icon__bar__chart" style="background-color: #ffe6cc;">
                         <i class="fa-solid fa-tablet"></i>
                     </div>
                     <div class="details">
                         <p class="percentage">1.4%</p>
-                        <p class="device-type">Tablet</p>
+                        <p class="device__type">Tablet</p>
                     </div>
                 </div>
             </div>
