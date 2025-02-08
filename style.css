@@ -204,7 +204,7 @@ body {
     background-color: #ffe5e8;
 }
 
-.card-revenue {
+.card__revenue {
     background-color: #fff4e5;
 }
 
@@ -329,8 +329,6 @@ h3 {
     .pattern__right {
         width: 25%;
         opacity: .6;
-
-        /* display: none; */
     }
 
     .info__container {
@@ -362,8 +360,6 @@ h3 {
         width: 20%;
         opacity: .3;
     }
-
-
 
 }
 
