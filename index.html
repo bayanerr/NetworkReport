@@ -7,6 +7,11 @@
     <script src="https://kit.fontawesome.com/4ab4e0b129.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <title>Muslim Ad Network Report</title>
 </head>
 
@@ -26,73 +31,134 @@
             <img src="assets/patternLeft.png" alt="" class="pattern__left">
         </div>
 
-       
+
     </header>
 
     <main>
-    <div class="info__container">
-        <div class="pacing-box">
-            <h4 class="campaign__text">CAMPAIGN PACING</h4>
-            <div class="emoji-rating">
-                <span class="emoji">😞</span>
-                <span class="emoji">😕</span>
-                <span class="emoji">😐</span>
-                <span class="emoji">🙂</span>
-                <span  class="emoji selected">😃</span>
+        <div class="info__container">
+            <div class="pacing-box">
+                <h4 class="campaign__text">CAMPAIGN PACING</h4>
+                <div class="emoji-rating">
+                    <span class="emoji">😞</span>
+                    <span class="emoji">😕</span>
+                    <span class="emoji">😐</span>
+                    <span class="emoji">🙂</span>
+                    <span class="emoji selected">😃</span>
+                </div>
             </div>
-        </div>
-        <div class="partner-box">
-            <h4 class="partner__text">PARTNER</h4>
-             <img class="partner-logo" src="assets/birrLogo.png" alt="Birr Necessities Logo">
+            <div class="partner-box">
+                <h4 class="partner__text">PARTNER</h4>
+                <img class="partner-logo" src="assets/birrLogo.png" alt="Birr Necessities Logo">
+            </div>
+
         </div>
 
-    </div>
+        <div class="metrics-container">
 
-    <div class="metrics-container">
+            <div class="metric-card card-impressions">
+                <div class="metric-icon">👁️</div>
+                <div class="metric-value">66,553</div>
+                <div class="metric-label">Impressions</div>
+            </div>
+
+            <div class="metric-card card-conversions">
+                <div class="metric-icon">🔄</div>
+                <div class="metric-value">13</div>
+                <div class="metric-label">Conversions</div>
+            </div>
+
+            <div class="metric-card card-clicks">
+                <div class="metric-icon">🖱️</div>
+                <div class="metric-value">23</div>
+                <div class="metric-label">Clicks</div>
+            </div>
+
+
+
+            <div class="metric-card card-ctr">
+                <div class="metric-icon">📈</div>
+                <div class="metric-value">0.03%</div>
+                <div class="metric-label">CTR</div>
+            </div>
+
+            <div class="metric-card card-reach">
+                <div class="metric-icon">👥</div>
+                <div class="metric-value">16,638</div>
+                <div class="metric-label">Muslims Reached</div>
+            </div>
+
+            <div class="metric-card card-revenue">
+                <div class="metric-icon">💰</div>
+                <div class="metric-value">$457.41</div>
+                <div class="metric-label">Revenue</div>
+            </div>
+
+
+        </div>
+
+
+        <div class="barcharts__container">
+            <!-- Chart 1 -->
+            <div class="chart">
+                <h3>Top Websites & Apps Per Impressions</h3>
+                <div class="bar-chart" id="chart-impressions"></div>
+            </div>
+            <!-- Chart 2 -->
+            <div class="chart">
+                <h3>Top Websites & Apps Per Clicks</h3>
+                <div class="bar-chart" id="chart-clicks"></div>
+            </div>
+
+        </div>
+        <script src="app.js"></script>
+
+
+
         
-        <div class="metric-card card-impressions">
-          <div class="metric-icon">👁️</div>
-          <div class="metric-value">66,553</div>
-          <div class="metric-label">Impressions</div>
-        </div>
-    
-        <div class="metric-card card-conversions">
-          <div class="metric-icon">🔄</div>
-          <div class="metric-value">13</div>
-          <div class="metric-label">Conversions</div>
-        </div>
-    
-        <div class="metric-card card-clicks">
-          <div class="metric-icon">🖱️</div>
-          <div class="metric-value">23</div>
-          <div class="metric-label">Clicks</div>
-        </div>
-       
+
+        <!-- Pie Chart -->
+        <h3 class="piechart__text">Impressions & Clicks per Device Type</h3>
+        <div class="chart-container">
+            <div class="piechart">
+              <canvas id="deviceChart"></canvas>
+            </div>
+
+            <div class="info">    
+                <div class="info-item">
+                  <div class="icon__bar__chart" style="background-color: #cce5ff;">
+                      <i class="fa-solid fa-mobile"></i>
+                  </div>
+                  <div class="details">
+                    <p class="percentage">88.1%</p>
+                    <p class="device-type">Smart Phone</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="icon__bar__chart" style="background-color: #e6ccff;">
+                      <i class="fa-solid fa-desktop"></i>                </div>
+                  <div class="details">
+                    <p class="percentage">10.5%</p>
+                    <p class="device-type">Desktop</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="icon__bar__chart" style="background-color: #ffe6cc;">
+                      <i class="fa-solid fa-tablet"></i>                </div>
+                  <div class="details">
+                    <p class="percentage">1.4%</p>
+                    <p class="device-type">Tablet</p>
+                  </div>
+                </div>
+              </div>
+              <script src="script.js"></script>
+
+          </div>
         
-        
-        <div class="metric-card card-ctr">
-          <div class="metric-icon">📈</div>
-          <div class="metric-value">0.03%</div>
-          <div class="metric-label">CTR</div>
-        </div>
-    
-        <div class="metric-card card-reach">
-          <div class="metric-icon">👥</div>
-          <div class="metric-value">16,638</div>
-          <div class="metric-label">Muslims Reached</div>
-        </div>
-    
-        <div class="metric-card card-revenue">
-          <div class="metric-icon">💰</div>
-          <div class="metric-value">$457.41</div>
-          <div class="metric-label">Revenue</div>
-        </div>
-   
-
-      </div>
 
 
-</main>
+
+
+    </main>
 </body>
 
 </html>
