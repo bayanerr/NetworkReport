@@ -92,12 +92,10 @@ body {
 
 .info__container {
     display: flex;
-    /* flex-direction: column; */
     gap: 20px;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    /* margin: 64px, 64px; */
     margin-left: 64px;
     margin-right: 64px;
     margin-top: 32px;
@@ -128,7 +126,6 @@ body {
     z-index: 2;
     font-size: 90px;
     opacity: 0.3;
-    /* Default faded */
 }
 
 .emoji.selected {
@@ -147,15 +144,15 @@ body {
 .partner-logo {
     z-index: 2;
     width: auto;
-    /* max-width: 120px; */
     height: auto;
     margin-top: 10px;
-    /* max-width: 30%; */
 }
 
 /* Metrics Section */
 .metrics-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
     margin-left: 72px;
     margin-right: 72px;
@@ -323,7 +320,23 @@ h3 {
 
 
 /* Multiple Screen Sizes Formats */
+@media (max-width: 1368px){
+    /* .chart-container {
+        flex-direction: column;
+    } */
+    .barcharts__container {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        align-items: center;
+        margin: 16px;
 
+    }
+    .bar{
+        height: 30px;
+
+    }
+    
+}
 @media (max-width: 1024px) {
 
     .pattern__left,
@@ -346,10 +359,10 @@ h3 {
     .barcharts__container {
         flex-wrap: wrap;
     }
-
     .chart-container {
         flex-direction: column;
     }
+    
     .info{
         flex-direction: row;
     }
@@ -379,11 +392,85 @@ h3 {
 }
 
 @media (max-width: 480px) {
-
+    /* Header Adjustments */
     .pattern-right,
     .pattern-left {
         display: none;
     }
+    .logo{
+        width: 250px;
+        padding-top: 0px;
+    }
+    .report-title{
+        font-size: 24px;
+    }
+    .date-container{
+        font-size: 20px;
+    }
+    /* Campain Pacing/Partner Adjustments */
+    .campaign__text,
+    .partner__text{
+        font-size: 16px;
+    }
+    .emoji, .emoji.selected{
+        font-size: 30px;
+    }
+    .partner-logo{
+    max-width: 80%;
+    }
+    .info__container,
+    .pacing-box,
+    .partner-box{
+        margin-top: 0px;
+    }
 
+    /* Metrics Adjustments */
+    .metrics-container{
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    .metric-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+    .metric-value {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.1rem;
+    }
+    .metric-label {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #6c757d;
+    }
+    .metric-card{
+        height: 120px;
+        width: 32%;
+    }
+
+    /* Bar Charts Adjustments */
+    .barcharts__container{
+        margin: 8px;
+    }
+    h3{
+        font-size: 16px
+    }
+    .bar-label,
+    .bar-value {
+        font-size: 12px;
+    }
+    .bar{
+        height: 25px;
+    }
+
+    /* Pie Charts adjustments */
+    .chart-container {
+        flex-direction: column;
+        margin: 16px;
+
+    }
+    .info{
+        flex-direction: column;
+    }
 
 }

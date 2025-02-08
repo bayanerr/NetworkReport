@@ -1,11 +1,8 @@
-// script.js
 $(document).ready(function () {
     const ctx = document.getElementById('deviceChart').getContext('2d');
-  
     new Chart(ctx, {
       type: 'doughnut',
       data: {
-        // labels: ['Smartphone', 'Desktop', 'Tablet'],
         datasets: [{
           data: [88.1, 10.5, 1.4],
           backgroundColor: ['#007bff', '#8e44ad', '#e67e22'],
