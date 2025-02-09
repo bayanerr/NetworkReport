@@ -6,6 +6,9 @@ body {
     text-align: center;
     background-color: #fff;
 }
+.main{
+    margin: 0px 10%;
+}
 
 /* Header */
 .header {
@@ -52,11 +55,13 @@ body {
 .pattern__left {
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .pattern__right {
     top: 0;
     right: 0;
+    z-index: 1;
 }
 
 .report__title {
@@ -92,13 +97,12 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-left: 64px;
-    margin-right: 64px;
     margin-top: 32px;
 }
 
 .pacing__box,
 .partner__box {
+    z-index: 2;
     margin-top: 64px;
     background: #fff;
     border-radius: 12px;
@@ -109,12 +113,14 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
+    z-index: 2;
 }
 
 .emoji__rating {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    z-index: 2;
 }
 
 .emoji {
@@ -148,8 +154,6 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-left: 72px;
-    margin-right: 72px;
     margin-top: 32px;
 }
 
@@ -187,23 +191,18 @@ body {
 .card__impressions {
     background-color: #eaf4ff;
 }
-
 .card__conversions {
     background-color: #f4f2ff;
 }
-
 .card__clicks {
     background-color: #f4ffe5;
 }
-
 .card__ctr {
     background-color: #fff8e5;
 }
-
 .card__reach {
     background-color: #ffe5e8;
 }
-
 .card__revenue {
     background-color: #fff4e5;
 }
@@ -351,6 +350,25 @@ h3 {
         flex-direction: row;
     }
 
+    .metric__icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+    .metric__value {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.1rem;
+    }
+    .metric__label {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #6c757d;
+    }
+    .metric__card{
+        height: 120px;
+        width: 20%;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -364,7 +382,6 @@ h3 {
 }
 
 @media (max-width: 600px) {
-
     .pattern__left,
     .pattern__right {
         width: 15%;
@@ -407,10 +424,6 @@ h3 {
     }
 
     /* Metrics Adjustments */
-    .metrics__container{
-        margin-left: 24px;
-        margin-right: 24px;
-    }
     .metric__icon {
         font-size: 1.5rem;
         margin-bottom: 0.3rem;
