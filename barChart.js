@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     // Data for the charts
     const impressionsData = [
