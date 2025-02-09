@@ -90,12 +90,12 @@ body {
 }
 
 
-/* Info Containers */
+/* Emoji and Partner Box Containers */
 .info__container {
     display: flex;
     gap: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     padding: 20px;
     margin-top: 32px;
 }
@@ -121,11 +121,12 @@ body {
     gap: 10px;
     margin-top: 10px;
     z-index: 2;
+
 }
 
 .emoji {
     z-index: 2;
-    font-size: 90px;
+    font-size: 50px;
     opacity: 0.3;
 }
 
@@ -138,17 +139,19 @@ body {
 .campaign__text,
 .partner__text {
     z-index: 2;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .partner__logo {
     z-index: 2;
-    width: auto;
+    width: 50%;
     height: auto;
     margin-top: 10px;
 }
 
-/* Metrics Section */
+
+
+/* Metric Cards Section */
 .metrics__container {
     display: flex;
     align-items: center;
@@ -210,7 +213,7 @@ body {
 }
 
 
-/* Bar Charts */
+/* Bar Charts Section */
 .barcharts__container {
     display: flex;
     flex-direction: row;
@@ -322,33 +325,32 @@ h3 {
     }
     .bar{
         height: 25px;
-    }
-    
+    } 
 }
-@media (max-width: 1024px) {
 
+@media (max-width: 1024px) {
+    /* Header Design Adjustments */
     .pattern__left,
     .pattern__right {
         width: 25%;
         opacity: .6;
     }
-
+    /* Pacing/Parner Box Adjustments */
     .info__container {
         flex-direction: column;
+        align-items: center;
         padding: 0px;
     }
-
+    /* Metrics Cards Adjustments */
     .metrics__container {
         flex-wrap: wrap;
     }
     .chart__container {
         flex-direction: column;
     }
-    
     .info{
         flex-direction: row;
     }
-
     .metric__icon {
         font-size: 1.5rem;
         margin-bottom: 0.3rem;
@@ -368,9 +370,23 @@ h3 {
         width: 20%;
     }
 
+    /* Campain Pacing/Partner Adjustments */
+    .campaign__text,
+    .partner__text{
+        font-size: 24px;
+    }
+    .emoji, .emoji.selected{
+        font-size: 30px;
+    }
+    .partner__logo{
+    max-width: 80%;
+    }
+    
+
 }
 
 @media (max-width: 768px) {
+    /* Top Design Adjustments */
     .pattern__left,
     .pattern__right {
         width: 20%;
@@ -380,6 +396,7 @@ h3 {
 }
 
 @media (max-width: 600px) {
+    /* Top Design Adjustments */
     .pattern__left,
     .pattern__right {
         width: 15%;
@@ -456,9 +473,7 @@ h3 {
 
     /* Pie Charts adjustments */
     .chart__container {
-        flex-direction: column;
-        /* margin: 0px; */
-    
+        flex-direction: column;    
     }
     .info{
         flex-direction: column;
